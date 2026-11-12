@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Scarlet · VR Final Project</title>
+<meta name="description" content="Team Scarlet's multiuser VR project for CSCI 4830/6830 at the University of Georgia, Fall 2026.">
+<style>
+  :root {
+    --bg: #fbf8f6;
+    --surface: #ffffff;
+    --text: #1d1718;
+    --muted: #675c5e;
+    --line: #e6dedc;
+    --accent: #b3122b;
+    --accent-soft: #fbe9ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141011;
+      --surface: #1e1819;
+      --text: #f3eced;
+      --muted: #ab9ea0;
+      --line: #342a2c;
+      --accent: #ff5a70;
+      --accent-soft: #3a1820;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 72px 0 48px; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  h1 { font-size: clamp(38px, 7vw, 60px); line-height: 1.05; margin: 0 0 18px; letter-spacing: -.02em; }
+  .lede { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 18px; letter-spacing: -.01em; }
+  p { margin: 0 0 14px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; padding: 0; list-style: none; }
+  .facts li {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .ideas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 22px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .team { display: grid; gap: 28px; }
+  .member { display: grid; grid-template-columns: 160px 1fr; gap: 24px; align-items: start; }
+  .member img {
+    width: 160px; height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .member h3 { margin: 0 0 2px; font-size: 21px; }
+  .role { color: var(--accent); font-size: 14px; font-weight: 600; margin: 0 0 10px; }
+  .member p { color: var(--muted); }
+  .video {
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    padding: 36px 20px;
+    text-align: center;
+    color: var(--muted);
+  }
+  footer { padding: 32px 0 56px; color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+  @media (max-width: 560px) {
+    header { padding: 48px 0 36px; }
+    .member { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">CSCI 4830 / 6830 · Fall 2026 · Final Project</p>
+    <h1>Team Scarlet</h1>
+    <p class="lede">A two-player VR experience for Meta Quest 3 where neither player can succeed alone: each one holds half of what the team needs.</p>
+    <ul class="facts">
+      <li>Multiuser</li>
+      <li>Meta Quest 3 / 3S</li>
+      <li>Public demo · 8 December 2026</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>The project</h2>
+      <p>Most multiplayer VR puts two people side by side doing the same thing. We want the opposite: an experience built on dependence, where what one player sees or controls is exactly what the other is missing, and the fun comes from working that out together, out loud, in real time.</p>
+      <p>We are prototyping a few directions and will lock one in before the scope deadline on 1 December.</p>
+
+      <div class="ideas">
+        <div class="card">
+          <h3>One body, two players</h3>
+          <p>Two people share a single avatar. Each controls one arm and either can turn the head. Picking up a mug becomes a negotiation.</p>
+        </div>
+        <div class="card">
+          <h3>The maze and the architect</h3>
+          <p>One player is inside a maze. The other draws it on a real whiteboard, and the lines are scanned into walls as they go.</p>
+        </div>
+        <div class="card">
+          <h3>Giant and ground level</h3>
+          <p>One player moves whole buildings from far above while the other navigates the same world at street height.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>The team</h2>
+      <div class="team">
+        <div class="member">
+          <img src="images/barrett.jpg" alt="Headshot of Barrett Giesbrecht">
+          <div>
+            <h3>Barrett Giesbrecht</h3>
+            <p class="role">Computer Science, minor in Business Management</p>
+            <p>My name is Barrett Giesbrecht and I'm a 4th year Computer Science student with a minor in Business Management here at the University of Georgia. I'm in my last semester and I'm going into IT Audit or Technology Risk / Cybersecurity. I really like to try and learn new things. I'm not super experienced in VR, but I have played a few games like Beat Saber, basketball and mini golf, and now all the projects I've created in this class. I've learned a ton this semester and I'm excited to put it all together.</p>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="images/charlie.jpg" alt="Headshot of Charlie">
+          <div>
+            <h3>Charlie</h3>
+            <p class="role">University of Georgia</p>
+            <p>Bio coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Video</h2>
+      <div class="video">Our project trailer will be posted here by 1 December.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Team Scarlet · University of Georgia · CSCI 4830/6830 Virtual Reality, Fall 2026
+  </div>
+</footer>
+
+</body>
+</html>
